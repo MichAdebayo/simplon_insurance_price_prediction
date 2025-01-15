@@ -2,11 +2,17 @@ import streamlit as st
 import pickle
 import pandas as pd
 
-
 def load_model():
-    with open("model.pkl", "rb") as file:
-        model = pickle.load(file)
-    return model
+    try:
+        with open("model.pkl", "rb") as file:
+            model = pickle.load(file)
+        return model
+    except FileNotFoundError:
+        print("Error: The model file 'model.pkl' was not found.")
+        return None
+    except pickle.UnpicklingError:
+        print("Error: The file could not be unpickled. Ensure it is a valid pickle file.")
+        return None
 
 
 def preprocess_data(data):
