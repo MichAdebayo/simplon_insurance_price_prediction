@@ -222,3 +222,4 @@ pyrightconfig.json
 dataset.csv
 *.csv
 
+*.pkl
