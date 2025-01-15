@@ -68,7 +68,6 @@ def main():
         unsafe_allow_html=True,
     )
 
-    # Initialiser les variables d'état
     if "selected_sex" not in st.session_state:
         st.session_state.selected_sex = None
     if "selected_smoker" not in st.session_state:
@@ -76,15 +75,9 @@ def main():
     if "selected_region" not in st.session_state:
         st.session_state.selected_region = None
 
-    # with st.form("Enter User Information:"):
     first_name = st.text_input("First Name")
     last_name = st.text_input("Last Name")
-    age = st.number_input("Age", min_value=0, max_value=120, step=1)
-    height = st.number_input("Height (cm)", min_value=50, max_value=250, step=1)
-    weight = st.number_input("Weight (kg)", min_value=10, max_value=300, step=1)
-    children = st.number_input("Number of Children", min_value=0, max_value=20, step=1)
 
-    # Boutons pour le sexe
     st.write("Gender")
     column1, column2, column3, column4, column5 = st.columns(5)
     with column1:
@@ -93,20 +86,21 @@ def main():
     with column2:
         if st.button("Female", key="female"):
             st.session_state.selected_sex = "Female"
-
-    # Boutons pour fumeur
+    age = st.number_input("Age", min_value=0, max_value=120, step=1)
+    
     st.write("Smoker")
-    column1, column2, column3, column4 = st.columns(4)
+    column1, column2, column3, column4, column5 = st.columns(5)
     with column1:
         if st.button("Yes", key="smoker_yes"):
             st.session_state.selected_smoker = "Yes"
     with column2:
         if st.button("No", key="smoker_no"):
             st.session_state.selected_smoker = "No"
+    height = st.number_input("Height (cm)", min_value=50, max_value=250, step=1)
+    weight = st.number_input("Weight (kg)", min_value=10, max_value=300, step=1)
 
-    # Boutons pour région
     st.write("Region")
-    column1, column2, column3, column4 = st.columns(4)
+    column1, column2, column3, column4, column5 = st.columns(5)
     with column1:
         if st.button("Northeast", key="northeast"):
             st.session_state.selected_region = "Northeast"
@@ -119,10 +113,11 @@ def main():
     with column4:
         if st.button("Southwest", key="southwest"):
             st.session_state.selected_region = "Southwest"
+    children = st.number_input("Number of Children", min_value=0, max_value=20, step=1)
+    column1, column2, column3, column4, column5 = st.columns(5)
+    with column5:
+        submit_button = st.button(label="Generate Prediction")
 
-    submit_button = st.button(label="Generate Prediction")
-
-    # Validation des entrées
     if submit_button:
         if not st.session_state.selected_sex:
             st.warning("Please select a gender!")
@@ -142,6 +137,7 @@ def main():
             model = load_model()
             preprocessed_data = preprocess_data(input_data)
             prediction = model.predict(preprocessed_data)
+            st.write(f"Hello {first_name} {last_name}, here is the prediction:")
             st.success(f"Predicted Insurance Charges: ${prediction[0]:,.2f}")
 
 
