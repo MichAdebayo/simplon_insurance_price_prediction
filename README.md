@@ -92,7 +92,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 ### Note:
- If you wish to only test the app without cloning the repo, you can do so using [this](https://real-time-insurance-prediction.streamlit.app/) link. This possible because the the application has been deployed on streamlit cloud.
+ If you wish to only test the app without cloning the repo, you can do so using [this](https://real-time-insurance-prediction.streamlit.app/) link. This is possible because the the application has been deployed on streamlit cloud.
 
 ### Project Worflow
 
