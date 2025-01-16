@@ -3,3 +3,4 @@ seaborn==0.13.2
 numpy==2.2.1
 pandas==2.2.3
 streamlit==1.41.1
+
