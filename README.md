@@ -63,7 +63,7 @@ The data collected from Assur'Aimant in Houston includes the following informati
 2. `data_cleaning.ipynb` - Data cleaning  
 3. `data_analysis.ipynb` - Exploratory Data Analysis (EDA) 
 4. `data_model.ipynb` - Model development and testing  
-5. `analyse.ipynb` - # Cleaning/EDA/model_testing 
+5. `analyse.ipynb` - # Cleaning / EDA / model_testing 
 6. `model.pkl` -  Exported trained model 
 7. `README.md` - This file 
 8. `requirements.txt` - Dependencies & packages 
@@ -113,4 +113,4 @@ graph TD
 ## Authors
 
 * Michael ADEBAYO [[GitHub](https://github.com/MichAdebayo)]
-* Khadija AASSI [[GitHub](https://github.com/Khadija-Aassi)]
+* Khadija AASSI [[GitHub](https://github.com/Khadaassi)]
