@@ -63,7 +63,7 @@ The data collected from Assur'Aimant in Houston includes the following informati
 2. `data_cleaning.ipynb` - Data cleaning  
 3. `data_analysis.ipynb` - Exploratory Data Analysis (EDA) 
 4. `data_model.ipynb` - Model development and testing  
-5. `analyse.ipynb` - # Cleaning/EDA/model_testing 
+5. `analyse.ipynb` - # Cleaning / EDA / model_testing 
 6. `model.pkl` -  Exported trained model 
 7. `README.md` - This file 
 8. `requirements.txt` - Dependencies & packages 
@@ -91,7 +91,6 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
-
 ### Note:
  If you wish to only test the app without cloning the repo, you can do so using [this](https://real-time-insurance-prediction.streamlit.app/) link. This possible because the the application has been deployed on streamlit cloud.
 
@@ -113,4 +112,4 @@ graph TD
 ## Authors
 
 * Michael ADEBAYO [[GitHub](https://github.com/MichAdebayo)]
-* Khadija AASSI [[GitHub](https://github.com/Khadija-Aassi)]
+* Khadija AASSI [[GitHub](https://github.com/Khadaassi)]
