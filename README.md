@@ -1,56 +1,54 @@
-# Simplon_Machine_learning
-# Prédire une Prime d'Assurance : Assur'Aimant US Expansion
+# Predicting an Insurance Premium: Assur'Aimant US Expansion
+![image](asset/insurance-policy.jpg)
+This project aims to help Assur'Aimant, a French insurer, estimate insurance premiums for its expansion in the United States. Currently, manual premium estimation is costly and time-consuming. This project uses machine learning to predict premiums based on customer demographics.
 
-Ce projet vise à aider Assur'Aimant, un assureur français, à estimer les primes d'assurance pour son expansion aux États-Unis.  Actuellement, l'estimation manuelle des primes est coûteuse et prend du temps.  Ce projet utilise le Machine Learning pour prédire les primes en fonction des données démographiques des clients.
+## Project Context
 
-## Contexte du Projet
+Assur'Aimant wants to modernize its insurance premium estimation process for the US market. We were commissioned to develop an AI solution capable of accurately predicting premiums based on customer characteristics. This project includes exploratory data analysis (EDA) and the construction of a predictive model.
 
-Assur'Aimant souhaite moderniser son processus d'estimation des primes d'assurance pour le marché américain.  Nous avons été mandatés pour développer une solution d'IA capable de prédire avec précision les primes en fonction des caractéristiques des clients.  Ce projet comprend une analyse exploratoire des données (EDA) et la construction d'un modèle prédictif.
+## Data
 
-## Données
+The data collected from Assur'Aimant in Houston includes the following information:
 
-Les données collectées auprès d'Assur'Aimant à Houston comprennent les informations suivantes :
-
-- **`BMI`**: Indice de Masse Corporelle (18.5 - 24.9 idéalement).
-- **`Sex`**: Sexe du souscripteur (homme ou femme).
-- **`Age`**: Âge du bénéficiaire principal.
-- **`Children`**: Nombre d'enfants à charge couverts par l'assurance.
-- **`Smoker`**:  Statut fumeur (fumeur ou non-fumeur).
-- **`Region`**: Région de résidence aux États-Unis (Nord-Est, Sud-Est, Sud-Ouest, Nord-Ouest).
-- **`Charges`**: Prime d'assurance facturée (variable cible).
-
-
-## Objectifs
-
-1. **Analyse Exploratoire des Données (EDA):**  Comprendre les données, identifier les tendances, les valeurs aberrantes et les relations entre les variables.  Ceci comprend :
-
-    - Vérification des valeurs manquantes et des doublons (avec `missingno`).
-    - Détection des valeurs aberrantes.
-    - Analyse univariée et bivariée.
-    - Analyse de corrélation.
-    - Validation d'hypothèses avec des tests statistiques.
-    - Visualisations avec `seaborn` (box plots, violin plots, etc.).
-
-2. **Modélisation Prédictive:**  Construire un modèle de Machine Learning pour prédire les primes d'assurance.  Ceci comprend :
-
-    - Création d'un modèle de base (Dummy Model).
-    - Séparation des données (80% entraînement, 20% test).
-    - Préparation des données (transformation logarithmique si nécessaire, gestion des `random_state` et `seed`).
-    - Sélection de modèles (`sklearn`: Régression Linéaire, Lasso, Ridge, ElasticNet).
-    - Évaluation des modèles (R², RMSE).
-    - Pré-traitement (Standardisation, encodage des variables catégorielles avec `sklearn.pipeline.Pipeline`).
-    - Optimisation ( `PolynomialFeatures`, `GridSearchCV`, `RandomSearchCV`).
-    - Analyse et interprétation des résultats (importance des variables).
-
-3. **Application Streamlit:** Développer une application interactive permettant :
-
-    - La saisie des données par l'utilisateur.
-    - La prédiction des primes en temps réel.
-    - L'utilisation d'un modèle pré-entraîné exporté en `.pkl`.
-    - L'intégration des pipelines de pré-traitement.
+- **`BMI`**: Body Mass Index (18.5 - 24.9 ideally).
+- **`Sex`**: Gender of the subscriber (male or female).
+- **`Age`**: Age of the primary beneficiary.
+- **`Children`**: Number of dependent children covered by insurance.
+- **`Smoker`**:  Smoking status (smoker or non-smoker).
+- **`Region`**: Region of residence in the United States (Northeast, Southeast, Southwest, Northwest).
+- **`Charges`**: Insurance premium billed (target variable).
 
 
-## Outils et Technologies
+## Objectives
+
+1. **Exploratory Data Analysis (EDA):** Understanding data, identifying trends, outliers and relationships between variables. This includes:
+
+    - Missing and duplicate values ​​check (with `missingno`).
+    - Outlier detection.
+    - Univariate and bivariate analysis.
+    - Correlation analysis.
+    - Hypothesis validation with statistical tests.
+    - Visualizations with `seaborn` (box plots, violin plots, etc.).
+
+2. **Predictive Modeling:**  Building a machine learning model to predict insurance premiums. This includes:
+
+    - Creation of a base model (Dummy Model).
+    - Data separation (80% training, 20% test).
+    - Data preparation (logarithmic transformation if necessary, management of `random_state` and `seed`).
+    - Model selection (`sklearn`: Linear Regression, Lasso, Ridge, ElasticNet).
+    - Model evaluation (R², RMSE).
+    - Pre-processing (Standardization, encoding of categorical variables with `sklearn.pipeline.Pipeline`).
+    - Optimization (`PolynomialFeatures`, `GridSearchCV`, `RandomSearchCV`).
+    - Analysis and interpretation of results (importance of variables).
+
+3. **Streamlit Application:** Develop an interactive application allowing:
+
+    - User data entry.
+    - Real-time bonus prediction.
+    - Use of a pre-trained model exported in `.pkl`.
+    - Integration of pre-processing pipelines.
+
+## Tools and Technologies
 
 - Python
 - `pandas`, `numpy`
@@ -59,35 +57,49 @@ Les données collectées auprès d'Assur'Aimant à Houston comprennent les infor
 - `streamlit`
 
 
-## Structure du Projet
+## Projet files
 
-
+1. `app.py` # Streamlit Application 
+2. `data_cleaning.ipynb` - cleaning # 
+3. `data_analysis.ipynb` - exploratory analysis #
+4. `data_model.ipynb` - model development and testing # 
+5. `analyse.ipynb` - #
+6. `model.pkl` -  Exported trained model #
+7. `README.md` - This file #
+8. `requirements.txt` - Dependencies & packages #
 
 ## Installation
 
 
 ```bash
-git clone https://github.com/votre_utilisateur/votre_repo.git
+git clone https://github.com/MichAdebayo/simplon_insurance_price_prediction.git
 
-cd votre_repo
+cd your_repo
 
-pip install -r [requirements.txt](VALID_FILE)
+pip install -r requirements.txt
 ```
 
-Exécution de l'application Streamlit
+### Running the Streamlit application
 
 ```bash
-streamlit run [app.py](VALID_FILE)
+streamlit run app.py
 ```
+### Project Worflow
 
 ```mermaid
 graph TD
-    A[Collecte des données] --> B(Analyse exploratoire);
-    B --> C{Choix du modèle};
-    C -- Régression linéaire --> D[Evaluation];
+    A[Load data] --> B(Exploratory Data Analysis);
+    B --> C{Train Model};
+    C -- Linear Regression --> D[Evaluation];
     C -- Lasso --> D;
-    C -- Ridge --> D;
+    C -- Linear SVR --> D;
     C -- ElasticNet --> D;
     D --> E[Optimisation];
-    E --> F[Application Streamlit];
+    E --> F[Streamlit Application]
+    F --> G[Deployment on Cloud];
+```
 
+## Authors
+
+* Michael ADEBAYO [[GitHub](https://github.com/MichAdebayo)]
+* Khadija AASSI [[GitHub](https://github.com/Khadija-Aassi)]
