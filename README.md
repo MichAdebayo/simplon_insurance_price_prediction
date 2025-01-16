@@ -35,7 +35,7 @@ The data collected from Assur'Aimant in Houston includes the following informati
     - Creation of a base model (Dummy Model).
     - Data separation (80% training, 20% test).
     - Data preparation (logarithmic transformation if necessary, management of `random_state` and `seed`).
-    - Model selection (`sklearn`: Linear Regression, Lasso, Ridge, ElasticNet).
+    - Model selection (`sklearn`: Linear Regression, Lasso, Ridge, ElasticNet or any model that performs best).
     - Model evaluation (R², RMSE).
     - Pre-processing (Standardization, encoding of categorical variables with `sklearn.pipeline.Pipeline`).
     - Optimization (`PolynomialFeatures`, `GridSearchCV`, `RandomSearchCV`).
@@ -59,31 +59,42 @@ The data collected from Assur'Aimant in Houston includes the following informati
 
 ## Projet files
 
-1. `app.py` # Streamlit Application 
-2. `data_cleaning.ipynb` - cleaning # 
-3. `data_analysis.ipynb` - exploratory analysis #
-4. `data_model.ipynb` - model development and testing # 
-5. `analyse.ipynb` - #
-6. `model.pkl` -  Exported trained model #
-7. `README.md` - This file #
-8. `requirements.txt` - Dependencies & packages #
+1. `app.py` - Streamlit Application 
+2. `data_cleaning.ipynb` - Data cleaning  
+3. `data_analysis.ipynb` - Exploratory Data Analysis (EDA) 
+4. `data_model.ipynb` - Model development and testing  
+5. `analyse.ipynb` - # Cleaning/EDA/model_testing 
+6. `model.pkl` -  Exported trained model 
+7. `README.md` - This file 
+8. `requirements.txt` - Dependencies & packages 
 
-## Installation
+## How to Run
+Follow these steps to execute the project:
 
+1. Ensure Python is installed on your system.
+2. Clone this repository to your local machine:
 
 ```bash
 git clone https://github.com/MichAdebayo/simplon_insurance_price_prediction.git
-
-cd your_repo
-
+```
+3. Navigate to the project directory:
+```
+cd simplon_insurance_price_prediction
+```
+4. Install the required dependencies:
+```
 pip install -r requirements.txt
 ```
 
-### Running the Streamlit application
+5.  Running the Streamlit application
 
 ```bash
 streamlit run app.py
 ```
+
+### Note:
+ If you wish to only test the app without cloning the repo, you can do so using [this](https://real-time-insurance-prediction.streamlit.app/) link. This possible because the the application has been deployed on streamlit cloud.
+
 ### Project Worflow
 
 ```mermaid
