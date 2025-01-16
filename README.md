@@ -44,7 +44,7 @@ The data collected from Assur'Aimant in Houston includes the following informati
 3. **Streamlit Application:** Develop an interactive application allowing:
 
     - User data entry.
-    - Real-time bonus prediction.
+    - Real-time insuranc charge prediction.
     - Use of a pre-trained model exported in `.pkl`.
     - Integration of pre-processing pipelines.
 
