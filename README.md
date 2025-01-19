@@ -67,6 +67,7 @@ The data collected from Assur'Aimant in Houston includes the following informati
 6. `model.pkl` -  Exported trained model 
 7. `README.md` - This file 
 8. `requirements.txt` - Dependencies & packages 
+9.  `asset` - Folder contains some figure results from the analysis
 
 ## How to Run
 Follow these steps to execute the project:
